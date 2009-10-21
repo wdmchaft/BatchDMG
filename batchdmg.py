@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 """
  batchdmg.py
  Batch-create DMG files from mounted media
