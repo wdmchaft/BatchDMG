@@ -1,106 +1,0 @@
-TBatchDMG
-v7
-r0
-t309452515.792571
-cCheck dependencies
-cProcessPCH /var/folders/zz/zzzivhrRnAmviuee+++++++++++/-Caches-/com.apple.Xcode.0/SharedPrecompiledHeaders/BatchDMG_Prefix-cjamafzhdlnszfbhxkkomaoonynb/BatchDMG_Prefix.pch.gch BatchDMG_Prefix.pch normal x86_64 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/BatchDMG.build/Debug/BatchDMG.build/Objects-normal/x86_64/BatchDMG.o /var/root/Documents/BatchDMG/BatchDMG.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
-cLd /var/root/Documents/BatchDMG/build/Debug/BatchDMG normal x86_64
-
-N/Developer/SDKs/MacOSX10.6.sdk
-c000000004BF4701900000000000000EE
-t1274310681
-s238
-
-N/Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/AppKit.framework/Headers/AppKit.h
-c000000004BE2C6D100000000000017ED
-t1273153233
-s6125
-
-N/Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
-c000000004B90FBB700000000000013E6
-t1267792823
-s5094
-
-N/System/Library/Frameworks/Foundation.framework/Foundation
-c000000004C11730A0000000000B37440
-t1276211978
-s11760704
-
-N/var/folders/zz/zzzivhrRnAmviuee+++++++++++/-Caches-/com.apple.Xcode.0/SharedPrecompiledHeaders/BatchDMG_Prefix-cjamafzhdlnszfbhxkkomaoonynb/BatchDMG_Prefix.pch.gch
-t1287759715
-s41401104
-
-N/var/root/Documents/BatchDMG/BatchDMG.m
-c000000004CC1A7310000000000000292
-t1287759665
-s658
-i<Foundation/Foundation.h>
-i<AppKit/AppKit.h>
-
-N/var/root/Documents/BatchDMG/BatchDMG_Prefix.pch
-c000000004CC19E41000000000000009E
-t1287757377
-s158
-i<Foundation/Foundation.h>
-
-N/var/root/Documents/BatchDMG/build/BatchDMG.build/Debug/BatchDMG.build/Objects-normal/x86_64/BatchDMG.LinkFileList
-c000000004CC1A7610000000000000068
-t1287759713
-s104
-
-N/var/root/Documents/BatchDMG/build/BatchDMG.build/Debug/BatchDMG.build/Objects-normal/x86_64/BatchDMG.o
-t1287759715
-s10264
-
-N/var/root/Documents/BatchDMG/build/Debug/BatchDMG
-t2
-s0
-
-CCheck dependencies
-r0
-lSLF07#2@18"Check dependencies309452513#309452513#0(0"0(0#1#0"8616373504#0"0#
-
-CCompileC build/BatchDMG.build/Debug/BatchDMG.build/Objects-normal/x86_64/BatchDMG.o /var/root/Documents/BatchDMG/BatchDMG.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
-s309452515.553554
-e309452515.776537
-r1
-xCompileC
-xbuild/BatchDMG.build/Debug/BatchDMG.build/Objects-normal/x86_64/BatchDMG.o
-x/var/root/Documents/BatchDMG/BatchDMG.m
-xnormal
-xx86_64
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-o/var/root/Documents/BatchDMG/BatchDMG.m: In function '-[Imager observe:]':
-o/var/root/Documents/BatchDMG/BatchDMG.m:16: warning: passing argument 1 of 'NSLog' from incompatible pointer type
-lSLF07#2@47"Compile /var/root/Documents/BatchDMG/BatchDMG.m309452515#309452515#0(189"/var/root/Documents/BatchDMG/BatchDMG.m: In function '-[Imager observe:]':/var/root/Documents/BatchDMG/BatchDMG.m:16: warning: passing argument 1 of 'NSLog' from incompatible pointer type1(22@60"Passing argument 1 of 'NSLog' from incompatible pointer type309452515#75#114#0(6@39"/var/root/Documents/BatchDMG/BatchDMG.m309452465#16#0#16#0#56"passing argument * of '*' from incompatible pointer type0(0#0#39"/var/root/Documents/BatchDMG/BatchDMG.m8602928096#1366"    cd /var/root/Documents/BatchDMG    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /var/root/Documents/BatchDMG/build/BatchDMG.build/Debug/BatchDMG.build/BatchDMG-generated-files.hmap -I/var/root/Documents/BatchDMG/build/BatchDMG.build/Debug/BatchDMG.build/BatchDMG-own-target-headers.hmap -I/var/root/Documents/BatchDMG/build/BatchDMG.build/Debug/BatchDMG.build/BatchDMG-all-target-headers.hmap -iquote /var/root/Documents/BatchDMG/build/BatchDMG.build/Debug/BatchDMG.build/BatchDMG-project-headers.hmap -F/var/root/Documents/BatchDMG/build/Debug -I/var/root/Documents/BatchDMG/build/Debug/include -I/var/root/Documents/BatchDMG/build/BatchDMG.build/Debug/BatchDMG.build/DerivedSources/x86_64 -I/var/root/Documents/BatchDMG/build/BatchDMG.build/Debug/BatchDMG.build/DerivedSources -include /var/folders/zz/zzzivhrRnAmviuee+++++++++++/-Caches-/com.apple.Xcode.0/SharedPrecompiledHeaders/BatchDMG_Prefix-cjamafzhdlnszfbhxkkomaoonynb/BatchDMG_Prefix.pch -c /var/root/Documents/BatchDMG/BatchDMG.m -o /var/root/Documents/BatchDMG/build/BatchDMG.build/Debug/BatchDMG.build/Objects-normal/x86_64/BatchDMG.o0#
-
-CLd /var/root/Documents/BatchDMG/build/Debug/BatchDMG normal x86_64
-s309452515.776616
-e309452515.792536
-r0
-xLd
-x/var/root/Documents/BatchDMG/build/Debug/BatchDMG
-xnormal
-xx86_64
-oUndefined symbols:
-o  "_OBJC_CLASS_$_NSWorkspace", referenced from:
-o      objc-class-ref-to-NSWorkspace in BatchDMG.o
-old: symbol(s) not found
-ocollect2: ld returned 1 exit status
-lSLF07#2@54"Link /var/root/Documents/BatchDMG/build/Debug/BatchDMG309452515#309452515#0(177"Undefined symbols:  "_OBJC_CLASS_$_NSWorkspace", referenced from:      objc-class-ref-to-NSWorkspace in BatchDMG.old: symbol(s) not foundcollect2: ld returned 1 exit status4(4@45""_OBJC_CLASS_$_NSWorkspace", referenced from:309452515#19#48#0(6@0"309452515#0#0#0#0#0"0(13@43"Objc-class-ref-to-NSWorkspace in BatchDMG.o309452515#67#50#0(6@0"309452515#0#0#0#0#0"0(13@19"Symbol(s) not found309452515#117#24#0(6@0"309452515#0#0#0#0#0"0(13@35"Collect2: ld returned 1 exit status309452515#141#36#0(6@0"309452515#0#0#0#0#0"0(0#0#0"8622174688#474"    cd /var/root/Documents/BatchDMG    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/gcc-4.2 -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk -L/var/root/Documents/BatchDMG/build/Debug -F/var/root/Documents/BatchDMG/build/Debug -filelist /var/root/Documents/BatchDMG/build/BatchDMG.build/Debug/BatchDMG.build/Objects-normal/x86_64/BatchDMG.LinkFileList -mmacosx-version-min=10.6 -framework Foundation -o /var/root/Documents/BatchDMG/build/Debug/BatchDMG1#
-
-CProcessPCH /var/folders/zz/zzzivhrRnAmviuee+++++++++++/-Caches-/com.apple.Xcode.0/SharedPrecompiledHeaders/BatchDMG_Prefix-cjamafzhdlnszfbhxkkomaoonynb/BatchDMG_Prefix.pch.gch BatchDMG_Prefix.pch normal x86_64 objective-c com.apple.compilers.gcc.4_2
-s309452513.780842
-e309452515.553407
-r1
-xProcessPCH
-x/var/folders/zz/zzzivhrRnAmviuee+++++++++++/-Caches-/com.apple.Xcode.0/SharedPrecompiledHeaders/BatchDMG_Prefix-cjamafzhdlnszfbhxkkomaoonynb/BatchDMG_Prefix.pch.gch
-xBatchDMG_Prefix.pch
-xnormal
-xx86_64
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@30"Precompile BatchDMG_Prefix.pch309452513#309452515#0(0"0(0#0#48"/var/root/Documents/BatchDMG/BatchDMG_Prefix.pch8612246048#1273"    cd /var/root/Documents/BatchDMG    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c-header -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /var/root/Documents/BatchDMG/build/BatchDMG.build/Debug/BatchDMG.build/BatchDMG-generated-files.hmap -I/var/root/Documents/BatchDMG/build/BatchDMG.build/Debug/BatchDMG.build/BatchDMG-own-target-headers.hmap -I/var/root/Documents/BatchDMG/build/BatchDMG.build/Debug/BatchDMG.build/BatchDMG-all-target-headers.hmap -iquote /var/root/Documents/BatchDMG/build/BatchDMG.build/Debug/BatchDMG.build/BatchDMG-project-headers.hmap -F/var/root/Documents/BatchDMG/build/Debug -I/var/root/Documents/BatchDMG/build/Debug/include -I/var/root/Documents/BatchDMG/build/BatchDMG.build/Debug/BatchDMG.build/DerivedSources/x86_64 -I/var/root/Documents/BatchDMG/build/BatchDMG.build/Debug/BatchDMG.build/DerivedSources -c /var/root/Documents/BatchDMG/BatchDMG_Prefix.pch -o /var/folders/zz/zzzivhrRnAmviuee+++++++++++/-Caches-/com.apple.Xcode.0/SharedPrecompiledHeaders/BatchDMG_Prefix-cjamafzhdlnszfbhxkkomaoonynb/BatchDMG_Prefix.pch.gch0#
-

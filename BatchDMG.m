@@ -5,6 +5,7 @@
 {
   BOOL g_observing;
   NSString *destination;
+  NSMutableArray *sources;
 }
 
 - (void)observeWorkspace: (NSNotification*) notification;
@@ -21,7 +22,7 @@
 	// observer for disk mounts
   if (!g_observing)
   {
-	  NSLog(@"Waiting for media...");
+    NSLog(@"Waiting for media...");
     NSNotificationCenter* center;
 	  
     center = [[NSWorkspace sharedWorkspace] notificationCenter];
@@ -31,6 +32,7 @@
                  object: nil];
 	
     g_observing = YES;
+    sources = [NSMutableArray arrayWithCapacity:99];
   }
     
 	// observer for finished rips
@@ -40,28 +42,58 @@
 			object:nil];
 	
   return self;
+  
 }
 
 - (void)checkTaskStatus:(NSNotification *)aNotification
 {
-  int status = [[aNotification object] terminationStatus];
-	NSLog(@"Task completed with status %d", status);
-	id args = [[aNotification object] arguments];
-	NSLog(@"%@", args);
-	
-  if (status == 0)
-	{
-		NSLog(@"Task succeeded.");
-		if ([args length] > 4)
-		{
-			NSString *path = [args objectAtIndex:4];
-			NSArray *eject = [NSArray arrayWithObjects:@"eject", @"-quiet", path, nil];
-			[NSTask launchedTaskWithLaunchPath:@"/usr/bin/hdiutil" arguments:eject];
+    int status = [[aNotification object] terminationStatus];
+    NSLog(@"hdiutil completed with status %d", status);
+    NSArray *args = [[aNotification object] arguments];
+    
+    if (status == 0)
+    {
+        if ([args count] > 4)
+        {
+            NSString *path = [args objectAtIndex:5];
+            NSArray *eject = [NSArray arrayWithObjects:@"eject", @"-quiet", path, nil];
+            [NSTask launchedTaskWithLaunchPath:@"/usr/bin/hdiutil" arguments:eject];
+            [sources removeObjectIdenticalTo:[args objectAtIndex:6]];
 		}
-		
 	}
 }
 
+- (void)observeWorkspace: (NSNotification*)notification
+{
+	id ui = [notification userInfo];
+	NSString *path = [ui valueForKey:@"NSDevicePath"];
+    NSString *volName = [ui valueForKey:@"NSWorkspaceVolumeLocalizedNameKey"];
+    
+    // disc is already being ripped
+    if ([sources containsObject:volName]) {
+        return;
+    }
+         
+     NSLog(@"Imaging: %@", volName);
+     
+     NSTask *dmg = [[NSTask alloc] init];
+     NSMutableArray *args = [NSMutableArray arrayWithObjects:@"create",
+                             @"-ov",
+                             @"-format",
+                             @"UDBZ",
+                             @"-srcfolder",
+                             path,
+                             volName,
+                             nil];
+     
+     [sources addObject:volName];
+     [dmg setCurrentDirectoryPath:@"/tmp/"];
+     [dmg setLaunchPath:@"/usr/bin/hdiutil"];
+     [dmg setArguments:args];
+     [dmg launch];
+         
+}
+         
 - (void)dealloc
 {
   if (g_observing)
@@ -87,40 +119,16 @@
     
 }
 
-- (void)observeWorkspace: (NSNotification*)notification
-{
-	id ui = [notification userInfo];
-	id path = [ui valueForKey:@"NSDevicePath"];
-	id volName = [ui valueForKey:@"NSWorkspaceVolumeLocalizedNameKey"];
-	
-	NSLog(@"Imaging: %@", volName);
-	
-	NSTask *dmg = [[NSTask alloc] init];
-	NSMutableArray *args = [NSMutableArray arrayWithObjects:@"create",
-						   @"-format",
-						   @"UDBZ",
-						   @"-srcfolder",
-						   path,
-						   volName,
-						   nil];
-	
-	[dmg setCurrentDirectoryPath:@"/tmp/"];
-	[dmg setLaunchPath:@"/usr/bin/hdiutil"];
-	[dmg setArguments:args];
-	[dmg launch];
-	
-}
-
 @end
 
-int main (int argc, const char * argv[])
+int main(int argc, const char * argv[])
 {
-  NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
+  NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
   
-  //NSRunLoop *rl = [NSRunLoop currentRunLoop];
-  //[[Imager alloc] init];
-  //[rl run];
-  NSLog(@"%d", argv[1]);
+  NSRunLoop *rl = [NSRunLoop currentRunLoop];
+  [[Imager alloc] init];
+  [rl run];
+  
   [pool release];
   return 0;
 }
