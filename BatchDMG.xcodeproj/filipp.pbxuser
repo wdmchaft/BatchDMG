@@ -22,6 +22,11 @@
 			C2B7A454128EE99600B3368C /* PBXTextBookmark */ = C2B7A454128EE99600B3368C /* PBXTextBookmark */;
 			C2B7A45B128EECFA00B3368C /* PBXTextBookmark */ = C2B7A45B128EECFA00B3368C /* PBXTextBookmark */;
 			C2B7A468128EEDAC00B3368C /* PBXTextBookmark */ = C2B7A468128EEDAC00B3368C /* PBXTextBookmark */;
+			C2B7A46C128EF4F800B3368C /* PBXTextBookmark */ = C2B7A46C128EF4F800B3368C /* PBXTextBookmark */;
+			C2B7A46D128EF4FE00B3368C /* PBXTextBookmark */ = C2B7A46D128EF4FE00B3368C /* PBXTextBookmark */;
+			C2B7A46E128EF5CE00B3368C /* PBXTextBookmark */ = C2B7A46E128EF5CE00B3368C /* PBXTextBookmark */;
+			C2B7A46F128EF61200B3368C /* PBXTextBookmark */ = C2B7A46F128EF61200B3368C /* PBXTextBookmark */;
+			C2B7A470128EF6FA00B3368C /* PBXTextBookmark */ = C2B7A470128EF6FA00B3368C /* PBXTextBookmark */;
 		};
 		sourceControlManager = C28049AD128A0C3B000C37B1 /* Source Control */;
 		userBuildSettings = {
@@ -29,9 +34,9 @@
 	};
 	08FB7796FE84155DC02AAC07 /* BatchDMG.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {752, 1833}}";
-			sepNavSelRange = "{1261, 0}";
-			sepNavVisRange = "{401, 1582}";
+			sepNavIntBoundsRect = "{{0, 0}, {752, 1885}}";
+			sepNavSelRange = "{327, 0}";
+			sepNavVisRange = "{763, 1597}";
 			sepNavWindowFrame = "{{654, 0}, {738, 878}}";
 		};
 	};
@@ -91,7 +96,7 @@
 		isa = PBXTextBookmark;
 		fRef = 08FB7796FE84155DC02AAC07 /* BatchDMG.m */;
 		rLen = 0;
-		rLoc = 3377;
+		rLoc = 3812;
 		rType = 0;
 	};
 	C28049CC128D5C57000C37B1 /* PBXTextBookmark */ = {
@@ -99,7 +104,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* BatchDMG.m */;
 		name = "BatchDMG.m: 131";
 		rLen = 0;
-		rLoc = 3377;
+		rLoc = 3812;
 		rType = 0;
 		vrLen = 1331;
 		vrLoc = 1449;
@@ -109,7 +114,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* BatchDMG.m */;
 		name = "BatchDMG.m: 131";
 		rLen = 0;
-		rLoc = 3377;
+		rLoc = 3812;
 		rType = 0;
 		vrLen = 1329;
 		vrLoc = 1449;
@@ -119,7 +124,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* BatchDMG.m */;
 		name = "BatchDMG.m: 115";
 		rLen = 0;
-		rLoc = 3144;
+		rLoc = 3580;
 		rType = 0;
 		vrLen = 1357;
 		vrLoc = 1550;
@@ -129,7 +134,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* BatchDMG.m */;
 		name = "BatchDMG.m: 65";
 		rLen = 0;
-		rLoc = 1614;
+		rLoc = 2050;
 		rType = 0;
 		vrLen = 1483;
 		vrLoc = 968;
@@ -139,7 +144,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* BatchDMG.m */;
 		name = "BatchDMG.m: 73";
 		rLen = 0;
-		rLoc = 1879;
+		rLoc = 2315;
 		rType = 0;
 		vrLen = 1508;
 		vrLoc = 1063;
@@ -149,7 +154,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* BatchDMG.m */;
 		name = "BatchDMG.m: 82";
 		rLen = 0;
-		rLoc = 2149;
+		rLoc = 2585;
 		rType = 0;
 		vrLen = 1561;
 		vrLoc = 984;
@@ -159,7 +164,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* BatchDMG.m */;
 		name = "BatchDMG.m: 52";
 		rLen = 0;
-		rLoc = 1181;
+		rLoc = 1617;
 		rType = 0;
 		vrLen = 1477;
 		vrLoc = 289;
@@ -169,9 +174,59 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* BatchDMG.m */;
 		name = "BatchDMG.m: 53";
 		rLen = 0;
-		rLoc = 1237;
+		rLoc = 1673;
 		rType = 0;
 		vrLen = 1582;
 		vrLoc = 401;
+	};
+	C2B7A46C128EF4F800B3368C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 08FB7796FE84155DC02AAC07 /* BatchDMG.m */;
+		name = "BatchDMG.m: 72";
+		rLen = 0;
+		rLoc = 2315;
+		rType = 0;
+		vrLen = 1593;
+		vrLoc = 401;
+	};
+	C2B7A46D128EF4FE00B3368C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 08FB7796FE84155DC02AAC07 /* BatchDMG.m */;
+		name = "BatchDMG.m: 72";
+		rLen = 0;
+		rLoc = 2315;
+		rType = 0;
+		vrLen = 1592;
+		vrLoc = 401;
+	};
+	C2B7A46E128EF5CE00B3368C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 08FB7796FE84155DC02AAC07 /* BatchDMG.m */;
+		name = "BatchDMG.m: 124";
+		rLen = 0;
+		rLoc = 3619;
+		rType = 0;
+		vrLen = 1185;
+		vrLoc = 2191;
+	};
+	C2B7A46F128EF61200B3368C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 08FB7796FE84155DC02AAC07 /* BatchDMG.m */;
+		name = "BatchDMG.m: 6";
+		rLen = 0;
+		rLoc = 489;
+		rType = 0;
+		vrLen = 1381;
+		vrLoc = 90;
+	};
+	C2B7A470128EF6FA00B3368C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 08FB7796FE84155DC02AAC07 /* BatchDMG.m */;
+		name = "BatchDMG.m: 6";
+		rLen = 0;
+		rLoc = 327;
+		rType = 0;
+		vrLen = 1597;
+		vrLoc = 763;
 	};
 }
