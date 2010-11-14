@@ -16,30 +16,41 @@
 
 - (void)observeWorkspace: (NSNotification*) notification;
 - (void)checkTaskStatus: (NSNotification*) notification;
+- (id)initWithPath: (NSString*) path;
 
 @end
 
 @implementation Imager
 
-- (id) init
+- (id) initWithPath:(NSString*) path
 {
-  [super init];
+    [super init];
+    
+    id fm = [NSFileManager defaultManager];
+    
+    // no output path given
+    if (![fm fileExistsAtPath:path])
+    {
+        path = [fm currentDirectoryPath];
+    }
+    
+    destination = path;
     
 	// observer for disk mounts
-  if (!g_observing)
-  {
-    NSLog(@"Waiting for media...");
-    NSNotificationCenter* center;
+    if (!g_observing)
+    {
+        NSLog(@"Waiting for media...");
+        NSNotificationCenter* center;
 	  
-    center = [[NSWorkspace sharedWorkspace] notificationCenter];
-    [center addObserver: self
-               selector: @selector(observeWorkspace:)
-                   name: @"NSWorkspaceDidMountNotification"
-                 object: nil];
+        center = [[NSWorkspace sharedWorkspace] notificationCenter];
+        [center addObserver: self
+                   selector: @selector(observeWorkspace:)
+                       name: @"NSWorkspaceDidMountNotification"
+                     object: nil];
 	
-    g_observing = YES;
-    sources = [NSMutableArray arrayWithCapacity:99];
-  }
+        g_observing = YES;
+        sources = [NSMutableArray arrayWithCapacity:99];
+    }
     
 	// observer for finished rips
 	[[NSNotificationCenter defaultCenter] addObserver:self
@@ -59,7 +70,7 @@
     
     if (status == 0)
     {
-        if ([args count] > 4)
+        if ([args count] > 4) // a ripping task
         {
             NSString *path = [args objectAtIndex:5];
             NSArray *eject = [NSArray arrayWithObjects:@"eject", @"-quiet", path, nil];
@@ -93,7 +104,7 @@
                              nil];
      
      [sources addObject:volName];
-     [dmg setCurrentDirectoryPath:@"/tmp/"];
+     [dmg setCurrentDirectoryPath:[destination stringByStandardizingPath]];
      [dmg setLaunchPath:@"/usr/bin/hdiutil"];
      [dmg setArguments:args];
      [dmg launch];
@@ -129,12 +140,19 @@
 
 int main(int argc, const char *argv[])
 {
-  NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-  
-  NSRunLoop *rl = [NSRunLoop currentRunLoop];
-  [[Imager alloc] init];
-  [rl run];
-  
-  [pool release];
-  return 0;
+    NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+    NSString *path = [NSString string];
+    
+    // output path given
+    if (argc == 2)
+    {
+        path = [NSString stringWithCString:argv[1] encoding:NSUnicodeStringEncoding];
+    }
+    
+    NSRunLoop *rl = [NSRunLoop currentRunLoop];
+    
+    [[Imager alloc] initWithPath:path];
+    [rl run];
+    [pool release];
+    return 0;
 }
